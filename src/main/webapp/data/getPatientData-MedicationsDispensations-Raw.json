@@ -1,0 +1,557 @@
+{
+    "successStatus":true,
+    "FactListImpl": {
+        "xmlns": "fact.adapter.nhinc.fha.hhs.gov.urn",
+        "contains": [
+            {
+                "xsi:type": "MedDispense",
+                "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "dyEntryType": "VitalSign",
+                "dyEntryId": "http://patients.kmr.org/danno/120_5-12468",
+                "dyReference": false,
+                "dateTimeCreated": "2001-12-17T09:30:47Z",
+                "dispenseLocation": "String",
+                "hasFillStatus": {
+                    "conceptCode": "String",
+                    "conceptLabel": "String",
+                    "contextSystemLabel": "String",
+                    "contextSystemCode": "String",
+                    "oid": "String"
+                },
+                "hasEffectiveDates": {
+                    "startDateTime": "2001-12-17T09:30:47Z",
+                    "endDateTime": "2001-12-17T09:30:47Z",
+                    "oid": "String"
+                },
+                "hasDispensedItem": {
+                    "hasDegree": {
+                        "dyEntryId": "String",
+                        "oid": "String"
+                    },
+                    "lotNumber": "String",
+                    "dateTimeReported": "2001-12-17T09:30:47Z",
+                    "dateTimeCreated": "2001-12-17T09:30:47Z",
+                    "isHistoricalFlag": true,
+                    "hasAdminStatus": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasTypeReference": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                    "hasDataSource": {
+                        "oid": "String"
+                    },
+                    "oid": "String"
+                },
+                "hasDegree": {
+                    "dyEntryId": "String",
+                    "oid": "String"
+                },
+                "dateTimeOrderDispensed": "2001-12-17T09:30:47Z",
+                "dispenseOrganization": 0,
+                "dateTimeOrderFilled": "2001-12-17T09:30:47Z",
+                "medicationProduct": {
+                    "lotNumber": "String",
+                    "hasDrugUnitDose": {
+                        "unit": "String",
+                        "val": "String",
+                        "oid": "String"
+                    },
+                    "dateTimeReported": "2001-12-17T09:30:47Z",
+                    "dateTimeCreated": "2001-12-17T09:30:47Z",
+                    "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                    "oid": "String",
+                    "hasDegree": {
+                        "dyEntryId": "String",
+                        "oid": "String"
+                    },
+                    "isHistoricalFlag": true,
+                    "hasAdminStatus": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasTypeReference": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasDrugItem": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasDataSource": {
+                        "oid": "String"
+                    },
+                    "hasDrugFormulation": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    }
+                },
+                "hasFillQuantity": {
+                    "unit": "String",
+                    "val": "String",
+                    "oid": "String"
+                },
+                "hasDataSource": {
+                    "oid": "String"
+                },
+                "valueInDefaultUnit": 3.14159265358979E0,
+                "dateTimeOfExpiration": "2001-12-17T09:30:47Z",
+                "dateTimeReported": "2001-12-17T09:30:47Z",
+                "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                "oid": "String",
+                "isHistoricalFlag": true,
+                "hasOriginalOrder": {
+                    "dateTimeCreated": "2001-12-17T09:30:47Z",
+                    "hasOrderPriority": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "dateTimeCancelled": "2001-12-17T09:30:47Z",
+                    "hasOrderQuantity": {
+                        "unit": "String",
+                        "val": "String",
+                        "oid": "String"
+                    },
+                    "hasEffectiveDates": {
+                        "startDateTime": "2001-12-17T09:30:47Z",
+                        "endDateTime": "2001-12-17T09:30:47Z",
+                        "oid": "String"
+                    },
+                    "hasOrderRestriction": {
+                        "hasRestrictionInterval": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasQuantity": {
+                            "unit": "String",
+                            "val": "String",
+                            "oid": "String"
+                        },
+                        "oid": "String"
+                    },
+                    "hasOrderStatus": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "orderID": 0,
+                    "hasDegree": {
+                        "dyEntryId": "String",
+                        "oid": "String"
+                    },
+                    "dateTimeOfOrder": "2001-12-17T09:30:47Z",
+                    "hasDataSource": {
+                        "oid": "String"
+                    },
+                    "valueInDefaultUnit": 3.14159265358979E0,
+                    "dateTimeReported": "2001-12-17T09:30:47Z",
+                    "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                    "oid": "String",
+                    "isHistoricalFlag": true,
+                    "hasAdminStatus": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasTimingRequest": {
+                        "unit": "String",
+                        "val": "String",
+                        "oid": "String"
+                    },
+                    "freeTextSig": "String",
+                    "hasTypeReference": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasClinicalStatus": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    }
+                },
+                "hasAdminStatus": {
+                    "conceptCode": "String",
+                    "conceptLabel": "String",
+                    "contextSystemLabel": "String",
+                    "contextSystemCode": "String",
+                    "oid": "String"
+                },
+                "reviewedBy": {
+                    "dateTimeCreated": "2001-12-17T09:30:47Z",
+                    "possessesPriviledge": {
+                        "hasDegree": {
+                            "dyEntryId": "String",
+                            "oid": "String"
+                        },
+                        "dateTimeReported": "2001-12-17T09:30:47Z",
+                        "dateTimeCreated": "2001-12-17T09:30:47Z",
+                        "isHistoricalFlag": true,
+                        "hasAdminStatus": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasTypeReference": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                        "hasDataSource": {
+                            "oid": "String"
+                        },
+                        "oid": "String"
+                    },
+                    "hasMaritalStatus": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasRace": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "dateOfBirth": "2001-12-17T09:30:47Z",
+                    "hasDegree": {
+                        "dyEntryId": "String",
+                        "oid": "String"
+                    },
+                    "hasReligiousAffiliation": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasEthnicity": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasIdentifier": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasDataSource": {
+                        "oid": "String"
+                    },
+                    "hasAge": {
+                        "unit": "String",
+                        "val": "String",
+                        "oid": "String"
+                    },
+                    "hasEmail": {
+                        "identifierValue": "String",
+                        "dateTimeReported": "2001-12-17T09:30:47Z",
+                        "dateTimeCreated": "2001-12-17T09:30:47Z",
+                        "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                        "oid": "String",
+                        "hasDegree": {
+                            "dyEntryId": "String",
+                            "oid": "String"
+                        },
+                        "accountType": "String",
+                        "isActiveFlag": true,
+                        "isHistoricalFlag": true,
+                        "hasAdminStatus": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasTypeReference": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "preferredFlag": true,
+                        "hasDataSource": {
+                            "oid": "String"
+                        }
+                    },
+                    "dateTimeReported": "2001-12-17T09:30:47Z",
+                    "hasAddress": {
+                        "dateTimeReported": "2001-12-17T09:30:47Z",
+                        "dateTimeCreated": "2001-12-17T09:30:47Z",
+                        "hasCountry": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                        "hasPostalCode": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "oid": "String",
+                        "hasState": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasDegree": {
+                            "dyEntryId": "String",
+                            "oid": "String"
+                        },
+                        "isActiveFlag": true,
+                        "isHistoricalFlag": true,
+                        "streetAddress": "String",
+                        "hasAdminStatus": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "city": "String",
+                        "hasTypeReference": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "preferredFlag": true,
+                        "hasDataSource": {
+                            "oid": "String"
+                        }
+                    },
+                    "hasLegalName": {
+                        "dateTimeReported": "2001-12-17T09:30:47Z",
+                        "dateTimeCreated": "2001-12-17T09:30:47Z",
+                        "firstName": "String",
+                        "hasPrefix": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                        "oid": "String",
+                        "hasDegree": {
+                            "dyEntryId": "String",
+                            "oid": "String"
+                        },
+                        "isActiveFlag": true,
+                        "isHistoricalFlag": true,
+                        "middleName": "String",
+                        "hasAdminStatus": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasSuffix": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasTypeReference": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "preferredFlag": true,
+                        "familyName": "String",
+                        "hasDataSource": {
+                            "oid": "String"
+                        }
+                    },
+                    "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                    "oid": "String",
+                    "hasGender": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "isHistoricalFlag": true,
+                    "hasAdminStatus": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasOrgUnit": {
+                        "hasDegree": {
+                            "dyEntryId": "String",
+                            "oid": "String"
+                        },
+                        "dateTimeReported": "2001-12-17T09:30:47Z",
+                        "dateTimeCreated": "2001-12-17T09:30:47Z",
+                        "isHistoricalFlag": true,
+                        "hasAdminStatus": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasTypeReference": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                        "hasDataSource": {
+                            "oid": "String"
+                        },
+                        "oid": "String"
+                    },
+                    "hasTypeReference": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasLanguage": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasAgentID": {
+                        "conceptCode": "String",
+                        "conceptLabel": "String",
+                        "contextSystemLabel": "String",
+                        "contextSystemCode": "String",
+                        "oid": "String"
+                    },
+                    "hasAlias": {
+                        "dateTimeReported": "2001-12-17T09:30:47Z",
+                        "dateTimeCreated": "2001-12-17T09:30:47Z",
+                        "firstName": "String",
+                        "hasPrefix": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "dateTimeUpdated": "2001-12-17T09:30:47Z",
+                        "oid": "String",
+                        "hasDegree": {
+                            "dyEntryId": "String",
+                            "oid": "String"
+                        },
+                        "isActiveFlag": true,
+                        "isHistoricalFlag": true,
+                        "middleName": "String",
+                        "hasAdminStatus": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasSuffix": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "hasTypeReference": {
+                            "conceptCode": "String",
+                            "conceptLabel": "String",
+                            "contextSystemLabel": "String",
+                            "contextSystemCode": "String",
+                            "oid": "String"
+                        },
+                        "preferredFlag": true,
+                        "familyName": "String",
+                        "hasDataSource": {
+                            "oid": "String"
+                        }
+                    }
+                },
+                "hasTypeReference": {
+                    "conceptCode": "String",
+                    "conceptLabel": "String",
+                    "contextSystemLabel": "String",
+                    "contextSystemCode": "String",
+                    "oid": "String"
+                },
+                "hasClinicalStatus": {
+                    "conceptCode": "String",
+                    "conceptLabel": "String",
+                    "contextSystemLabel": "String",
+                    "contextSystemCode": "String",
+                    "oid": "String"
+                }
+            }
+        ]
+    }
+}

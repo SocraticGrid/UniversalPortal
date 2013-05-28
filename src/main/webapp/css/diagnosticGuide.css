@@ -1,0 +1,97 @@
+/*******************************************************************************
+ *
+ * Copyright (C) 2012 by Cognitive Medical Systems, Inc (http://www.cognitivemedciine.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not 
+ * use this file except in compliance with the License. You may obtain a copy of 
+ * the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed 
+ * under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations under the License.
+ *
+ ******************************************************************************/
+ 
+ /******************************************************************************
+ * Socratic Grid contains components to which third party terms apply. To comply 
+ * with these terms, the following notice is provided:
+ *
+ * TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+ * Copyright (c) 2008, Nationwide Health Information Network (NHIN) Connect. All 
+ * rights reserved.
+ * Redistribution and use in source and binary forms, with or without 
+ * modification, are permitted provided that the following conditions are met:
+ * 
+ * - Redistributions of source code must retain the above copyright notice, this 
+ *   list of conditions and the following disclaimer.
+ * - Redistributions in binary form must reproduce the above copyright notice, 
+ *   this list of conditions and the following disclaimer in the documentation 
+ *   and/or other materials provided with the distribution.
+ * - Neither the name of the NHIN Connect Project nor the names of its 
+ *   contributors may be used to endorse or promote products derived from this 
+ *   software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+ * POSSIBILITY OF SUCH DAMAGE.
+ * 
+ * END OF TERMS AND CONDITIONS
+ *
+ ******************************************************************************/
+
+/* Disease probability */
+#dxGuideDiseaseProb div { float:left;  }
+#dxGuideDiseaseProbColors div { float:left; font-size:9px; color:white; min-width:60px;background-color:#ccc;line-height:15px;margin-left:3px;text-align:center }
+.dxGuideDiseaseProbActive { font-weight:bold; color:#ffffff; }
+/* Line styles */
+.dxVertical { position:absolute; width:9px; left:50%; margin-left:-5px }
+.dxVerticalArrowLong { top:20px; height:150px; background:url("../images/9x30-arrow.png") no-repeat bottom }
+.dxVerticalArrowShort { top:20px; height:33px; background:url("../images/9x30-arrow.png")no-repeat bottom }
+.dxVerticalArrowShortNotMid { height:30px; margin-top:-3px; background:url("../images/9x30-arrow.png") no-repeat }
+.dxVerticalLong {  height:120px; width:3px; margin-left:3px } /* top = dxDiagActionStatusText heights*/
+.dxVerticalShort { height:31px; width:3px; margin-left:3px } /* top = dxDiagActionStatusText heights*/
+.dxHorizontal { height:3px; }
+.dxHorizontalRow { width:100% }
+
+/* Stage and Other options */
+.emrDiagStage { position:relative; border-bottom:1px solid #ccc; padding:10px 0 50px 0; z-index:15 }
+.emrDiagStageCompleted { opacity:.4 }
+.emrDiagStageArrow { width:21px; height:11px; margin:0 auto;margin-bottom:30px; background:url("../images/diagStageArrow.png") no-repeat }
+.emrDiagStageNode { width:250px; height:50px; margin:auto; border:2px solid; text-align:center; z-index: 10 }
+.emrDiagStageHeader { line-height:50px;width:70px; font-weight:bold; color:#ffffff; }
+
+.dxGuideActionHeader { font-size:14px; font-weight:bold }
+.emrDiagActionRow { margin-bottom:5px }
+    /*.emrDiagActionRow td { vertical-align:bottom !important }*/
+
+    .emrDiagActionNode { position: relative; width:150px; min-height:50px; max-height:50px; z-index: 10; margin: 10px auto 0 }
+    .emrDiagActionNodeLow { border:2px dashed; line-height:50px; text-align:center }
+    .emrDiagActionNodeNormal { border:2px solid }
+    .emrDiagActionNodeSuggested { border:2px solid #00829d; }
+    .emrDiagActionNodeHeading { line-height:20px; color:white; text-align:center }
+    .emrDiagOtherActions { position:absolute; width:100px; padding-left:100px; padding-top:10px; background:url("../images/otherDxArrow.png") no-repeat;background-position:25px 50% }
+    .emrDiagSuggestedBG { background-color:#00829d }
+    .emrDiagActionContent { height:30px; text-align:center }
+    /*.emrDiagActionContent > p { margin:auto 0  }*/
+    .emrDiagActionClickable { cursor:pointer }
+
+.dxDiagActionStatus { color:white;font-weight:bold;text-align:center }
+.dxDiagActionStatusText { position:relative; min-height:20px; line-height:20px; font-size:9px; white-space:nowrap; text-align:center; }
+.dxDiagActionStatusTextLast { min-height:50px; line-height:20px; font-size:9px; white-space:nowrap; text-align:center; }  /* min-height = line-height + shortVertLine image height in emrUtility */
+#dxGuideActionControl button { margin-right:10px }
+
+#dxGuideOverlay { position:absolute; background-color:black; top:0; left:0; width:100%; z-index:100 !important; }
+.dxGuideDialog { position:absolute; background-color:white; display:none; z-index:110 !important; }
+#emrDiagGuideWrapper { position:relative }
+#dxGuideDecisionStatus { width:300px; margin:0 auto }

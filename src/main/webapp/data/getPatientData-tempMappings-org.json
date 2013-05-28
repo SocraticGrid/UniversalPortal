@@ -1,0 +1,58 @@
+{
+    "medications-list": {
+        "successStatus": true,
+        "factType": "Medications",
+        "trxnType": "list",
+        "visibleGridHeaders":  true,
+        "maxColumns":15,
+        "detailTabs":   [
+            {"label": "Dispensations",            "type":"grid", "responseType":"detail",  "index":"dispensations", "filters": ["code","codeSystemCode"]},
+            {"label": "Description",              "type":"text", "responseType":"ecs",   "index":"4", "filters": ["code","codeSystemCode", "sectionId"]},
+            {"label": "Instructions",             "type":"text", "responseType":"ecs",   "index":"102", "filters": ["code","codeSystemCode", "sectionId"]},
+            {"label": "Indications",              "type":"text", "responseType":"ecs",   "index":"104", "filters": ["code","codeSystemCode", "sectionId"]},
+            {"label": "Side-Effects",             "type":"text", "responseType":"ecs",   "index":"105", "filters": ["code","codeSystemCode", "sectionId"]},
+            {"label": "Potential Interactions",   "type":"text", "responseType":"ecs",   "index":"106", "filters": ["code","codeSystemCode", "sectionId"]}
+        ],
+        "gridHeaders": [
+            { "columnId":"orderDate",  "value":"Order D/T",  "width":"10"} ,
+            { "columnId":"medication",  "value":"Medication",  "width":"10"},
+            { "columnId":"sig",  "value":"Sig",  "formatter":"pageIcon",  "width":"4"},
+            { "columnId":"formulation",  "value":"Formulation",  "width":"10"},
+            { "columnId":"unit",  "value":"Unit",  "width":"10"},
+            { "columnId":"dose",  "value":"Dose",  "width":"10"},
+            { "columnId":"route",  "value":"Route",  "width":"10"},
+            { "columnId":"frequency",  "value":"Frequency",  "width":"10"},
+            { "columnId":"duration",  "value":"Duration",  "width":"10"},
+            { "columnId":"quantity",  "value":"Quantity",  "width":"10"},
+            { "columnId":"refills",  "value":"Refills",  "width":"10"},
+            { "columnId":"prescriber",  "value":"Prescriber",  "width":"10"},
+            { "columnId":"orderExpireDate",  "value":"Order Expir.",  "width":"10"},
+            { "columnId":"indication",  "value":"Indication",  "width":"10"},
+            { "columnId":"source",  "value":"Source",  "width":"10"}
+        ],
+        "factsRoot":"FactListImpl.contains",
+        "facts": {
+            "orderDate": "dateTimeOfOrder",
+            "medication":"hasMedication.medicationProduct.hasDrugItem.conceptLabel",
+            "code": "",
+            "codeSystemName": "",
+            "sig": "freeTextSig",
+            "formulation": "",
+            "unit": "hasMedication.medicationProduct.hasDrugUnitDose.val+hasMedication.medicationProduct.hasDrugUnitDose.unit",
+            "dose": "hasMedication.hasDose.val+hasMedication.hasDose.unit",
+            "route": "hasADministrationRoute.conceptLabel",
+            "frequency": "hasADministrationFrequency.val",
+            "duration": "hasADministrationFrequency.unit+hasADministrationFrequency.val",
+            "quantity": "hasOrderQuantity.val+hasOrderQuantity.unit",
+            "refills": "numberRefillsAllowed",
+            "prescriber": "OrderBy.hasLegalName.firstName+ OrderBy.hasLegalName.familyName",
+            "orderExpireDate": "hasEffectiveDates.endDateTime",
+            "indication": "hasIndication.conceptLabel",
+            "source": "hasDataSource.conceptLabel",
+            "hoverTexts":      ["", "Need hover text mapping here"]
+        }
+    },
+    "medications-detail": {
+
+    }
+}

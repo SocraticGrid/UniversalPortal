@@ -1,0 +1,27 @@
+{
+    "addressBookFact": {
+        "successStatus": true,
+        "statusMessage": null,
+        "contacts": [
+            {
+                "contactId": "doe.jane",
+                "name": "Jane M Doe",
+                "address1": "5003 Elbrus Drive",
+                "state": "CA",
+                "zipCode": "92115",
+                "phones": [{"type":"Home","number":"123-456-7890"}, {"type":"Work"}],
+                "email":"janemdoe@example.org"
+            },
+            {
+                "contactId": "doe.john",
+                "name": "John Doe, MD",
+                "address1": "4920 Elbrus Drive",
+                "state": "CA",
+                "city":"San Diego",
+                "zipCode": "92115",
+                "phones": [],
+                "email":"johndoe@example.org"
+            }
+        ]
+    }
+}

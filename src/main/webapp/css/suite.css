@@ -1,0 +1,212 @@
+/*******************************************************************************
+ *
+ * Copyright (C) 2012 by Cognitive Medical Systems, Inc (http://www.cognitivemedciine.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not 
+ * use this file except in compliance with the License. You may obtain a copy of 
+ * the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed 
+ * under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations under the License.
+ *
+ ******************************************************************************/
+ 
+ /******************************************************************************
+ * Socratic Grid contains components to which third party terms apply. To comply 
+ * with these terms, the following notice is provided:
+ *
+ * TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+ * Copyright (c) 2008, Nationwide Health Information Network (NHIN) Connect. All 
+ * rights reserved.
+ * Redistribution and use in source and binary forms, with or without 
+ * modification, are permitted provided that the following conditions are met:
+ * 
+ * - Redistributions of source code must retain the above copyright notice, this 
+ *   list of conditions and the following disclaimer.
+ * - Redistributions in binary form must reproduce the above copyright notice, 
+ *   this list of conditions and the following disclaimer in the documentation 
+ *   and/or other materials provided with the distribution.
+ * - Neither the name of the NHIN Connect Project nor the names of its 
+ *   contributors may be used to endorse or promote products derived from this 
+ *   software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+ * POSSIBILITY OF SUCH DAMAGE.
+ * 
+ * END OF TERMS AND CONDITIONS
+ *
+ ******************************************************************************/
+
+html { overflow-x:hidden; height:100% }
+
+body { height:100%; width:100%; font-size:12px; font-family:Arial,sans-serif; margin:0; padding:0; }
+li,ul,img,form,h1,h2,h3,h4,h5,h6,hr,textarea,span { margin:0; padding:0; border:0; list-style:none; vertical-align:middle }
+a { color:white;text-decoration:none; font-size:12px; }
+input {font-family:Arial,sans-serif; height:16px; font-size:11px; background:#f5f5f5;vertical-align:middle; margin-right:5px; border:1px solid #ccc; padding:0 }
+/*input[type="checkbox"] { margin:0 5px 0 0 !important }*/
+select {font-family:Arial,sans-serif;  line-height:18px; height:18px; font-size:11px; background:#f5f5f5;vertical-align:middle; border:1px solid #ccc; margin:0; }
+label { line-height:18px; }
+button { font-family:Arial,sans-serif; font-size:12px; margin:0; cursor:pointer; height:21px; background:#f5f5f5; color:#000; border:1px solid #ddd; border-radius:5px }
+button[disabled], button[disabled]:hover { cursor:default; color:#999; cursor:default; background:#f5f5f5 }
+button::-moz-focus-inner { padding: 0;border: 0 }       /* FF get rid of inner borders and spacing */
+
+.suiteButtonSpacing { padding-right:10px }
+.suiteTitleFont { font-size:23px; line-height:30px }
+.suiteRegText { color:#000000; }
+/* When using the height() function, it miscalculates items that have border, even if they are invisible. Put this inside a container that needs a line separator and it wont miscalculate */
+.suiteBorderLine { position:absolute;height:1px;width:100%;top:0;background:#ccc }
+
+/* Dynamic, custom dropdowns */
+#suiteDropdown { z-index:999 }
+#suiteDropdownList { border:1px solid #ddd;background:#f5f5f5;padding:3px 0 }
+#suiteDropdownList li { cursor:pointer;padding:3px 5px }
+
+.suiteButton { outline: 0; margin:0; padding:0; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; /*zoom: 1; */ }
+
+/* Global suite classes */
+.contentPadding { padding:15px; overflow-y:auto !important; }             /* Default scrolling padded container */
+.contentPaddingFixed { padding:15px; overflow-y:hidden !important; }    /* Used for non-scrolling padded containers */
+
+.suiteErrorText { text-align:center; font-weight:bold; color: #f89c2b }
+.suiteBodyHeaderTop { position:relative; min-height:50px; }
+#suiteBodyTitle { float:left; font-size:23px;line-height:45px; padding-top:5px }
+
+/* Custom button classes */
+.suiteBodyHeaderButtonsL { float:left; margin-left:20px; margin-top:17px }
+.suiteBodyHeaderButtonsL div { float:left }
+.suiteBodyHeaderButtonsL button { margin-left:5px }
+.suiteBodyHeaderButtonsR { float:right;margin-top:17px }
+.suiteBodyHeaderButtonsR button { margin-left:5px }
+.suiteDropL { width:4px;height:21px;margin-left:5px; background:url("../images/buttonDropL.png") no-repeat }
+.suiteDropM { padding:0 5px;line-height:21px;background:url('../images/buttonDropM.png') }
+.suiteDropR { width:17px;height:21px; background:url("../images/buttonDropR.png") no-repeat }
+
+.suiteGrayBG { background-color:#ccc }
+.suiteHeadingHeight { line-height:25px; color:#fff; }
+.suiteCloseButtonHeader { padding:5px 0; color:#fff; text-align:right; height:20px }
+.suiteCloseButton { cursor:pointer; font-size:12px;  }
+.suiteCloseGraphic { cursor:pointer; height:19px; width:19px; float:right; clear:both; background:url("../images/Close-Icon.png") no-repeat   }
+
+/* Table alignment classes */
+.tblCenter { margin:auto }
+table.tblClean { border:none; border-collapse:collapse; border-spacing:0; }
+table.tblClean td { padding:0; margin:0; border-collapse:collapse; border-spacing:0; vertical-align:top; }
+table.tblNorm { border:none; border-collapse:collapse; border-spacing:0; }
+table.tblNorm td { padding:0 10px 10px 0; margin:0; border-collapse:collapse; border-spacing:0; vertical-align:top; }
+
+table.thinBorder td { border:1px solid }
+table.inputTable td { padding:2px; }
+table.inputTable tr { line-height:20px; }
+table.inputTable label { text-align:right; }
+td.inputLabel { text-align:right; line-height:20px; padding-right:10px !important; }
+td.rightLabel { text-align:right; height:18px; padding-right:10px !important; }
+table.inputTable span[class="suiteFieldReq"] { padding-left: 2px}
+/*table.inputTable input { height:15px; }*/
+
+.suiteGrid td { border-bottom:2px solid white !important; vertical-align:middle; font-size:12px; line-height:23px }
+.suiteGridBold td { font-weight:bold !important; font-size:12px !important; }
+
+/* Navigation tabs in the header */
+.suiteTabActive { background-color:white; font-size:13px; line-height:26px; font-weight:bold; color:black; }
+.suiteTabActive div { float:left }
+.suiteTabText { padding:0 5px; float:left }
+.suiteTabInactive { background:url("../images/tabMiddle.png"); font-size:13px; line-height:26px; color:white; }
+.suiteTabInactive div { float:left }
+.suiteTabL { background: url("../images/tabLeft.png") no-repeat; width:7px; height:26px; }
+.suiteTabR { background: url("../images/tabRight.png") no-repeat; width:12px; height:26px; }
+.suiteTabLD { background: url("../images/tabLeftD.png") no-repeat; width:7px; height:26px; }
+.suiteTabRD { background: url("../images/tabRightD.png") no-repeat; width:12px; height:26px; }
+.activeSearchIcon { width:13px; height:13px; margin-top:6px; padding-left:5px; background:url('../images/Magnifying-Glass-Active.png') no-repeat }
+.inactiveSearchIcon { width:16px; height:13px; margin-top:6px; padding-left:5px; background: url('../images/Magnifying-Glass.png') no-repeat }
+.allergyIcon { float:right; width:16px; height:14px; margin:5px 5px 0; background: url('../images/allergyIcon.png')  no-repeat; display:none }
+
+#suiteHeader { color:white; text-decoration:none; position:relative; }
+    #suiteHeaderTop { position:absolute; right:20px;line-height:25px }
+    #suiteHeaderTop span { padding-left:10px;}
+    #suiteHeaderTop .fullScreen { display:none; cursor:pointer }
+    .suiteHeaderBottom { position:absolute; width:100%; bottom:0; }
+    .suiteHeaderTabIndent { padding-left:236px}
+
+#suiteFonts { position:absolute; bottom:0; right:0; cursor:pointer }
+    #suiteFonts span  { padding:0 0 5px 10px;line-height:25px }
+
+/* Navigation */
+.suiteLeftNavHeading { font-weight:bold; font-size:13px; line-height:20px; border-bottom:1px solid #eee}
+
+/* Center content area */
+div#suiteBodyHeader { position:relative }
+div#suiteBodyHeader a { padding-right:5px; }
+div#suiteBodyHeader h2 { line-height:40px;}
+/*div#suiteBodyHeader button { height:20px; padding:0 3px;vertical-align:top }*/
+div#suiteBodyHeader td { white-space:nowrap; vertical-align:top; }
+div#suiteBody { border:1px solid #ddd;height:100% }
+
+.suiteBorder { border:1px solid #ccc }
+.suiteBorder { border:1px solid #ccc }
+#suiteSplitter { height:8px; background: #ddd url('../images/splitter-background.png'); border-bottom:1px solid #ccc; border-top:1px solid #ccc; margin:auto }
+#suiteSplitterHandle {height:8px; width:20px; margin:auto; background:url('../images/Splitter-3.png') no-repeat center }
+
+.suiteSplitBottomDetail { padding:10px 20px; }
+    /*.suiteSplitBottomDetail ul { list-style:none }*/
+
+/* Surveys */
+.suiteSurveyInbox { padding:6px 0; border-bottom:1px solid #d3d3d3; }
+.suiteSurveyRisk { padding:5px 2px 0 0; }
+.suiteSurveyDxGuideAction { padding:2px; border-bottom:1px solid #d3d3d3; }
+.suiteSurveyDxGuideControl { padding:2px; border:none }
+.surveyQuestionCancel { cursor:pointer;opacity:.5 }
+
+/* Dialogs */
+.suiteDialogHeading { line-height:40px; color:#fff; font-size:23px; font-weight: bold; }
+#suiteDialogContent { position:absolute; display:none; z-index:110 !important; }
+.suiteDialog { position:absolute; display:none; top:0; left:0; }
+#suiteDialogOverlay { background-color:black; height:100%; width:100%; opacity:.5; z-index:100 !important; }
+    #suiteDialogHeader h3 { line-height:30px; margin-left:10px; }
+    #suiteDialogBody { overflow:auto; background:white }
+
+/* Miscellaneous global suite styles */
+#miscInfo div { padding:0 20px; }
+
+/* Horizontal slider - NOTE: Make sure the widths and margins are set to the width of the handle supplied */
+.ui-slider-horizontal { height: 10px; border:0; position:relative; background:none }
+.ui-slider .ui-slider-handle  { position: absolute; border:none !important; top:0; margin:0; outline:none; height:10px; width:73px; background:url("../images/scroller-3.png") no-repeat !important;}
+
+/* HORIZONTAL SLIDER styles */
+.suiteGridNavWrapper { position:relative; display:none; } /* Wraps both the slider and the navigation arrows */
+.suiteGridSliderWrapper { margin-right:120px }  /*margin = handle + arrows widths */
+.suiteGridSliderArrows { position:absolute;right:0;top:1px;width:47px;height:9px;background:#ddd }
+.suiteGridSliderArrow { float:left;height:9px;width:15px;border-left:1px solid #ccc; }
+.gridSliderTip { position:absolute; line-height:15px; padding:0 10px; top:-20px; white-space:nowrap; display:none; color:white; font-weight:bold; margin:auto }
+
+/* GRID overrides */
+.suiteGridSpacer { height:12px }
+.ui-jqgrid.ui-widget-content { border:none; }   /* No borders around the grids. Affects the display engine calcualtions also */
+.ui-jqgrid-labels > th { line-height:20px; height:25px !important; font-size:12px; text-align:left !important }  /* Heading height and left alignment */
+.ui-jqgrid tr.jqgfirstrow td {border:none }    /*Take out strange black border between and below the grid headings */
+.ui-resizable-s { cursor: s-resize; height: 12px; width: 100%; bottom: -12px; left: 0; }  /* Hover cursor positioning when preparing to resize horizontally */
+.ui-jqgrid tr.jqgrow td { padding-left:4px }    /* Add a little space to all the content cells to align with the indented headings */
+.ui-jqgrid .ui-icon-asc { margin-left:1px }  /* Align the sorting arrows in the columns */
+/*.ui-jqgrid .ui-jqgrid-bdiv { position: relative; margin: 0; padding:0; overflow-x:hidden; overflow-y:auto; text-align:left; }   *//*  Cleans up display flickering when screen is resizing */
+
+/* Inbox styles */
+.gridStarred { background-image:url("../images/starred.png") }
+.tasksProgress { width:80px; border:1px solid gray; background:white; }
+    .taskProgress { height:8px; }
+
+#factSearch { color:#333; }
+.factPageIcon { width:16px; height:16px; background:url("../images/pageIcon.png") no-repeat; cursor:pointer; }
+
+#suiteFooter { width:100%; position:fixed; bottom:0; height:25px; background-color:#f6f6f2; text-align:center; line-height:25px;}
